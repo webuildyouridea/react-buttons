@@ -1,6 +1,11 @@
+import React from 'react';
+import RoundedButton from './RoundedButton';
+import {shallow, render, mount} from 'enzyme';
 
-describe('Addition', () => {
-  it('know that 2 and 2 make 4', () => {
-      expect(2+2).toBe(4);
+test('Rounded Button', () => {
+  it('should render a button element', () => {
+    let wrapper = shallow(<RoundedButton/>);
+
+    expect(wrapper).toMatchSnapshot();
   });
 });
