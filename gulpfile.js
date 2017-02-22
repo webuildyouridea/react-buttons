@@ -8,6 +8,8 @@ var gulp      = require('gulp'),
   browserify  = require('browserify'),
   watchify    = require('watchify'),
   babelify    = require('babelify'),
+  uglify      = require('gulp-uglify'),
+  rename      = require('gulp-rename'),
   lrload      = require('livereactload'),
   browserSync = require('browser-sync'),
   jest        = require('jest-cli');
@@ -63,6 +65,9 @@ gulp.task('bundle', function() {
 
   bundler.bundle()
     .pipe(source('index.js'))
+    // .pipe(buffer())
+    // .pipe(isProd ? uglify() : gutil.noop())
+    // .pipe(isProd ? rename({suffix: '.min'}) : gutil.noop())
     .pipe(gulp.dest(DIST));
 });
 

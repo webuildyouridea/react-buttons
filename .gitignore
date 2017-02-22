@@ -1,2 +1,4 @@
 node_modules
 distExample
+flow-typed
+.DS_Store
