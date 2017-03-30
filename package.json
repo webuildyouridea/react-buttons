@@ -1,12 +1,13 @@
 {
   "name": "muub-react-buttons",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Set of custom React button components",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "NODE_ENV=development gulp",
     "test": "gulp test",
     "build": "NODE_ENV=production gulp dist",
+    "compile": "babel -d ./lib ./src",
     "min-dist": "./node_modules/.bin/uglifyjs ./dist/index.js -o ./dist/index.min.js --compress --mangle",
     "dist": "NODE_ENV=production browserify ./src/index.js -o ./dist/index.js -t [ babelify ] --no-bundle-external && npm run min-dist"
   },
