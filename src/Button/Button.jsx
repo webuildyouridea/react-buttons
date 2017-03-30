@@ -45,9 +45,10 @@ class Button extends React.Component {
     }
 
     return (
-      <button className={classNames(className, {
+      <button className={classNames({
         [classes.button]: true,
-        [classes[`button--${buttonStyle}`]]: true
+        [classes[`button--${buttonStyle}`]]: true,
+        [`${className}`]: true
       })}
       style={inlineStyle}
       onClick={onClick}>
