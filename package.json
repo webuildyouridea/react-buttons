@@ -1,6 +1,6 @@
 {
   "name": "muub-react-buttons",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Set of custom React button components",
   "main": "src/index.js",
   "scripts": {
